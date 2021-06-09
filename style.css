@@ -202,6 +202,7 @@ footer {
         background:url(imgs/tiles.png);
         background-size:contain;
         animation:moveit 1s infinite;
+        border:2px solid rgb(247,255,163);
     }
     @keyframes moveit {
         0% {top:0px;}
