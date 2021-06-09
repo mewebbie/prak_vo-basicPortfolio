@@ -1,0 +1,141 @@
+<!DOCTYPE HTML5>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Kaushan+Script&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" href="style.css">
+    
+    </head>
+    <body>
+        <header class=header>
+            <div class="head-text">
+                <h1>you're at <span class="head-name">Prakash's</span> portfolio!</h1>
+            </div>
+            <nav>
+                <button onclick="expandNav()" class="nav-icon">
+                    <img alt="menu-expand" src="icons/grip-horizontal.png">
+                </button>
+                <div class="nav-content">
+                    <button onclick="homeopen()"><span id="home">HOME</span></button>
+                    <button onclick="toolopen()"><span id="tooltech">TOOLS & TECH</span></button>
+                    <button onclick="certopen()"><span id="cert">CERTIFICATIONS</span></button>
+                    <button onclick="projectopen()"><span id="projects">PROJECTS</span></button>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <article class="home-article">
+                <div class="home-cont">
+                <span>Hello Visitor <span style="font-size:35px;">&#128075. </span></span>
+                <span>Prakash is a sophomore in electronics with a passion towards web technologies. </span>
+                <span>He focuses on efficient layout techniques with minimal lines of code.</span>
+                <span>He has been practicing front-end web technologies since a year.</span>
+                <span>He wears an enthusiastic attitude and is always open to suggestions and feedback.</span>
+                </div>
+            </article>
+
+            <article class="tools-article">
+                <span class="text">Tools and Tech I use 👨‍💻</span>
+                <img alt="vsCode" src="icons/vscode.png"/>
+                <img alt="github" src="icons/github.png"/>
+                <img alt="html" src="icons/html.png"/>
+                <img alt="css" src="icons/css.png"/>
+                <img alt="javascript" src="icons/js.png"/>
+                <img alt="jQuery" src="icons/jquery.png">
+            </article>
+
+            <div class="cert">
+                <img alt="coursera" src="imgs/html.jpg"/>
+                <img alt="coursera" src="imgs/css.jpg"/>
+                <img alt="coursera" src="imgs/Javascript.jpg"/>
+                <img alt="coursera" src="imgs/Responsive.jpg"/>
+            </div>
+
+            <div class="project-container">
+                <div class="project">
+                    <img class="proj-pic" alt="project" src="imgs/accordian.png">
+                    <div class="sub-img">
+                        <a target="_blank" href="https://github.com/mewebbie/faq-accordian"><img class="ghub-anchor" src="icons/github.png"></a>
+                        <a target="_blank" href="https://mewebbie.github.io/faq-accordian/">Live site</a>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <img class="proj-pic" alt="project" src="imgs/article-preview.png">
+                    <div class="sub-img">
+                        <a target="_blank" href="https://github.com/mewebbie/article-preview"><img class="ghub-anchor" src="icons/github.png"></a>
+                        <a target="_blank" href="https://mewebbie.github.io/article-preview/">Live site</a>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <img class="proj-pic" alt="project" src="imgs/social-proof-design.png">
+                    <div class="sub-img">
+                        <a target="_blank" href="https://www.google.com"><img class="ghub-anchor" src="icons/github.png"></a>
+                        <a target="_blank" href="https://mewebbie.github.io/social-proof-design/">Live site</a>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <img class="proj-pic" alt="project" src="imgs/testimonial-slider.png">
+                    <div class="sub-img">
+                        <a target="_blank" href="https://github.com/mewebbie/bootcamp-testimonial-slider"><img class="ghub-anchor" src="icons/github.png"></a>
+                        <a target="_blank" href="https://mewebbie.github.io/bootcamp-testimonial-slider/">Live site</a>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+
+        <footer>
+            <div class="social">
+                <span>Connect with me:</span>
+                <div>
+                    <a target="_blank" href="https://github.com/mewebbie"><img alt="github" src="icons/github.png"></a>
+                    <a target="_blank" href=""><img alt="linkedin" src="icons/linkedin.png"></a>
+                    <a target="_blank" href="https://www.twitter.com/prakashvoiceout"><img alt="twitter" src="icons/twitter.png"></a>
+                </div>
+            </div>
+            <div class="copyright">
+                //© 2021. All rights reserved//
+            </div>
+        </footer>
+    </body>
+    <script>
+        var i = 0;
+        function toolopen() {
+            document.getElementsByClassName('home-article')[0].style.display = "none";
+            document.getElementsByClassName('tools-article')[0].style.display = "grid";
+            document.getElementsByClassName('cert')[0].style.display = "none";
+            document.getElementsByClassName('project-container')[0].style.display = "none";
+        }
+        function homeopen() {
+            document.getElementsByClassName('home-article')[0].style.display = "block";
+            document.getElementsByClassName('tools-article')[0].style.display = "none";
+            document.getElementsByClassName('cert')[0].style.display = "none";
+            document.getElementsByClassName('project-container')[0].style.display = "none";
+        }
+        function certopen() {
+            document.getElementsByClassName('home-article')[0].style.display = "none";
+            document.getElementsByClassName('tools-article')[0].style.display = "none";
+            document.getElementsByClassName('cert')[0].style.display = "grid";
+            document.getElementsByClassName('project-container')[0].style.display = "none";
+        }
+        function projectopen() {
+            document.getElementsByClassName('home-article')[0].style.display = "none";
+            document.getElementsByClassName('tools-article')[0].style.display = "none";
+            document.getElementsByClassName('cert')[0].style.display = "none";
+            document.getElementsByClassName('project-container')[0].style.display = "grid";
+        }
+        function expandNav() {
+            i++;
+            if(i%2 == 1) {
+                document.getElementsByClassName('nav-content')[0].style.display = "flex";
+            }
+            else document.getElementsByClassName('nav-content')[0].style.display = "none";
+        }
+    </script>
+</html>
